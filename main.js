@@ -1,16 +1,3 @@
-// Could be GET or POST/PUT/PATCH/DELETE
-// fetch('//dummyjson.com/test')
-// .then(res => res.json())
-// .then(console.log);
-
-/* { status: 'ok', method: 'GET' } */
-// const requestAPI = async () => {
-//     const res = await fetch('https://dummyjson.com/products');
-//     const json = await res.json();
-//     console.log(json);
-// }
-
-// requestAPI();
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const productContainer = document.getElementById('product-container');
@@ -18,19 +5,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const res = await fetch('https://dummyjson.com/products?limit=30');
         const json = await res.json();
         displayProducts(json.products);
-        // tsetShow(json.products);
-    }
-
-    function tsetShow(products){
-        products.forEach(product => {
-            const Thumbnail = document.createElement('img');
-            Thumbnail.src = product.thumbnail;
-            productContainer.appendChild(Thumbnail);
-
-            const showLink = document.createElement('p');
-            showLink.textContent = product.images;
-            productContainer.appendChild(showLink);
-        })
     }
 
     function displayProducts(products) {
@@ -57,7 +31,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     logoImg.src = './assets/images/fragrances.png';
                     break;
             }
-            // logoImg.src = './assets/images/pearl_logo_white.avif';
             logoImg.classList.add('card-logo');
             cardHeadDiv.appendChild(logoImg);
 
