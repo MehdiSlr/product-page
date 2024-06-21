@@ -1,4 +1,4 @@
-# Shopping Site
+# Shopping Page
 
 This project is a simple web application that displays a list of products fetched from an API. It includes a styled card layout for each product, and each card displays the product's image, details, rating, stock information, and price. 
 
