@@ -20,17 +20,17 @@ This project is a simple web application that displays a list of products fetche
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/shopping-site.git
+git clone https://github.com/MehdiSlr/product-page.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd shopping-site
+cd product-page
 ```
 3. Open index.html in your favorite web browser.
 
 ## Project Structure
 
-- shopping-site
+- product-page
     - assets
         - images
             - logo.png

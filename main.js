@@ -1,11 +1,18 @@
 
+let limit = 30;
+
 document.addEventListener('DOMContentLoaded', ()=>{
     const productContainer = document.getElementById('product-container');
-    async function fetchProducts() {
-        const res = await fetch('https://dummyjson.com/products?limit=30');
+    async function fetchProducts(limit) {
+        const res = await fetch('https://dummyjson.com/products?limit=' + limit);
         const json = await res.json();
         displayProducts(json.products);
     }
+
+    const loadMoreBtn = document.getElementById('more');
+    loadMoreBtn.addEventListener('click', ()=>{
+        fetchProducts(limit += 30);
+    });
 
     function displayProducts(products) {
         products.forEach(product => {
@@ -145,5 +152,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
             productContainer.appendChild(cardDiv);
         });
     }
-    fetchProducts();
+    fetchProducts(limit);
 })
